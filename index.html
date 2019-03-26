@@ -1,15 +1,16 @@
 <html>
   <head>
-    <title></title>
+    <title>Diagrams of Crafty Penguin</title>
     <script type="text/javascript" src="d3.js">
    </script>
    <style>
    @import url('https://fonts.googleapis.com/css?family=Handlee');
+   @import url('https://fonts.googleapis.com/css?family=Courgette');
    body{
      font-family: 'Handlee', cursive;
      background-color:#deecff;
    }
-   p{
+   #name{
      background-color:#e8d3ff;
      width:100px;
      border:1px #c6cfff solid;
@@ -25,11 +26,26 @@
      .fill .tick{
        opacity:0;
      }
+     #name:hover{
+       border:3px #c6cfff solid;
+       background-color:#e878b1;
+     }
+     div{
+       border:1px #d3b3b8 solid;
+       padding:10px;
+       margin:10px;
+     }
+     p.reason{
+       font-size:25px;
+       font-family: 'Courgette', cursive;
+     }
    </style>
   </head>
-<img src="crafty-penguin-300px copy.png" width="70px" height="70px"/>
-<p>Crafty Penguin</p>
   <body>
+    <div>
+  <img src="crafty-penguin-300px copy.png" width="70px" height="70px"/>
+  <p id="name">Crafty Penguin</p>
+</div>
     <div>
     <h1>Line Chart For Homework Grades</h1>
     <svg id="homework"></svg>
@@ -49,6 +65,22 @@
   <div>
     <h1>Quizz Grade Frequency</h1>
     <svg id="QZfrequency"></svg>
+  </div>
+  <div>
+    <p class="reason">
+      I have generated five graphs of the grades of the Crafty Penguin. In order to generate
+      each graphic, I used five different CSV files to make it easier to get data. In order
+      to find out how the penguin behaves in quizz and homework, I used line chart to see
+      how its grades change over time. Then in order to learn about what is the most frequent
+      grade it has, I used two bar charts to calculate its frequency of each grade of homework
+      and quizzes.
+    </p>
+    <p class="reason">
+      When creating each graphic, I first import the data from CSV files and then bind the data
+      to each rect or to the path which is used to create the line chart. Be default, the line chart
+      has black shadows, so I set the fill to none and give the line chart a stroke. After creating the shape
+      of the charts, I created the Axises of each chart.
+    </p>
   </div>
     <script type="text/javascript" src="histogram.js">
     </script>
